@@ -754,10 +754,13 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                 <div class="form-row">
                                                     <div class="col-md-12 mb-3">
                                                         <label class="form-label">File (Browser)</label>
-                                                        <div class="custom-file">
+
+                                                        <div class="dropzone" id="mydropzone"></div>
+
+                                                        <!-- <div class="custom-file">
                                                             <input type="file" class="custom-file-input" id="customFile">
                                                             <label class="custom-file-label" for="customFile">Choose file</label>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
 
                                                 </div>
@@ -805,6 +808,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <script src="js/datagrid/datatables/datatables.bundle.js"></script>
         <script src="js/notifications/sweetalert2/sweetalert2.bundle.js"></script>
         <script src="js/formplugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+        <!--dropzone -->
+        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 
         <!-- common modal!!! -->
         <script src="js/common-modal.js"></script>
@@ -1032,7 +1039,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                     ]
                 });
-    
 
                  // range picker
                 $('.input-daterange').datepicker({
@@ -1048,6 +1054,86 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 $('#dt-basic-example').on('dblclick', 'tr', function () {
                   // let name = $('td', this).eq(1).text();
                     $('#default-example-modal-lg').modal('show');
+                });
+
+                Dropzone.autoDiscover = false;
+                $("#mydropzone").dropzone({ 
+                    //autoDiscover: false,
+                    //url: "/file/post",
+                    url: 'url/here',
+                    autoProcessQueue: false,
+                    uploadMultiple: true,
+                    parallelUploads: 100,       
+                    addRemoveLinks: true,
+                    paramName: "userfile",
+                    acceptedFiles: 'image/jpg, image/gif, image/png, .txt, application/vnd.ms-excel, application/docx, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                    maxFilesize: 5.0,
+                    dictDefaultMessage: '<span class="text-center"><span class="font-lg visible-xs-block visible-sm-block visible-lg-block"><span class="font-lg"><i class="fa fa-caret-right text-danger"></i>  <span class="font-xs">견적서 파일을 업로드 해주세요.</span></span><span>&nbsp&nbsp<h4 class="display-inline"> </h4></span>',
+                    dictResponseError: 'Error uploading file!',
+                    maxFiles:5, 
+                    resizeHeight: 10,
+                    init: function () {
+                        var thisDropzone = this;
+                        myDropzone = this;
+                        // just showing some dropped files stats
+                        var totalFiles = 0, completeFiles = 0;
+                        
+                        $(fileList).each(function(){      
+                            thisDropzone.options.addedfile.call(thisDropzone, this);
+                            var file_type = (this.name).split('.');
+                            var path = '/files'+this.path+'/'+this.newName;
+                            if(file_type.length > 1 && (file_type[1].toLowerCase() == 'jpg' || file_type[1] == 'png'|| file_type[1] == 'gif')){
+                                thisDropzone.options.thumbnail.call(thisDropzone, this, path);
+                                
+                                var aTag = $('<a download="'+this.name+'" href="'+path+'" title="'+this.name+'" class="downloadALink"></a>');
+                                var imgTag = $(this.previewElement).find('.dz-details img');
+                                aTag.insertAfter($(imgTag));
+                                aTag.append($(imgTag))
+                                
+                            }else{
+                                var span = $(this.previewElement).find(".dz-filename span")
+                                var text = span.text();
+                                $(span).html('<a href="'+path+'" download="'+text+'">'+text+'<a>');
+                            }
+         
+                            
+                            
+                            this.previewElement.classList.add('dz-success');
+                            
+                        });
+                        
+                        this.on('addedfile', function(file){
+                            totalFiles += 1;
+                            totalFilesFormatted = totalFiles.toFixed(2);
+                            $('#showTotalFileCount').html(totalFilesFormatted);
+                        });
+                        this.on('removedfile', function(file){
+                            totalFiles -= 1;
+                            totalFilesFormatted = totalFiles.toFixed(2);
+                            $('#showTotalFileCount').html(totalFilesFormatted);
+                            
+                            if(file.fileIdx != undefined)delFileList.push({idx : file.fileIdx});
+                        });
+                        this.on('maxfilesreached', function(file){
+                            alert('maxFiles reached');
+                        });
+                        this.on('maxfilesexceeded', function(file){
+                            alert('files dropped exceeded maxFiles');
+                        });
+                        this.on("sendingmultiple", function(){
+                            // event when files are being sent
+                            // console.log('sendingmultiple');
+                        });
+                        this.on("successmultiple", function(files, response) {
+                            // event when files are successfully uploaded
+                            // you can return a response string and process it here through 'response'
+                            // console.log('successmultiple');
+                        });
+                        this.on("errormultiple", function(files, response) {
+                          // event when there's an error
+                            // console.log('errormultiple');
+                        });
+                    }
                 });
 
             });
