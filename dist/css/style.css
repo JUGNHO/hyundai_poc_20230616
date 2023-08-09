@@ -1,3 +1,25 @@
+/* Hyundai Font */
+@font-face{
+    font-family:HyundaiHeadBold;
+    font-style:normal;
+    font-weight:400;
+    font-display:swap;
+    src:url(../fonts/HyundaiSansHead-Bold.eot);
+    src:url(../fonts/HyundaiSansHead-Bold.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/HyundaiSansHead-Bold.woff) format("woff"),
+    url(../fonts/HyundaiSansHead-Bold.ttf) format("truetype")
+}
+@font-face{
+    font-family:HyundaiTextMedium;
+    font-style:normal;
+    font-weight:400;
+    font-display:swap;
+    src:url(../fonts/HyundaiSansText-Medium.eot);
+    src:url(../fonts/HyundaiSansText-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/HyundaiSansText-Medium.woff) format("woff"),
+    url(../fonts/HyundaiSansText-Medium.ttf) format("truetype")
+}
+
 /* Navigation */
 .primary-nav > a {
     display:none !important;
@@ -258,4 +280,84 @@
 }
 .main-panel-mwm .panel-count .count-item:nth-child(2) {
     background-color:rgba(255,255,255,0.15);
+}
+
+
+/* Business Card */
+.business-card-gp {
+    display:flex;
+}
+.business-card {
+    width:25.8rem;
+    height:16.2rem;
+    border:1px solid #ddd;
+    padding:1.5rem;
+    box-sizing:border-box;
+    margin-right:2rem;
+    position:relative;
+    font-family:HyundaiTextMedium,sans-serif;
+    color:#121212;
+}
+.business-card.card-front {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.business-card.card-front strong {
+    font-family:HyundaiHeadBold,sans-serif;
+}
+.business-card.card-front .user-zone {
+    display:inline-flex;
+    flex-direction: column;
+    font-size:0.875rem;
+    line-height:1.2rem;
+}
+.business-card.card-front .user-zone strong {
+    font-size:1.6rem;
+    line-height:2rem;
+}
+.business-card.card-front .office-zone {
+    display:inline-flex;
+    flex-direction: column;
+    font-size:0.875rem;
+    line-height:1.2rem;
+}
+.business-card.card-front .office-zone strong {
+    font-size:0.875rem;
+}
+.business-card.card-front .office-zone span {
+    letter-spacing: -0.01rem;
+}
+.business-card.card-front .office-zone .tel-zone {
+    display:flex;
+}
+.business-card.card-front .office-zone .tel-zone > .tel {
+    margin-right:1rem;
+}
+.business-card.card-front .office-zone .email-zone {
+    display:flex;
+}
+.business-card.card-front .office-zone .email-zone > span:first-child {
+    margin-right:1rem;
+}
+.business-card.card-front .front-logo {
+    position:absolute;
+    top:2rem;
+    right:1.5rem;
+    display:flex;
+    width:5rem;
+    height:2.54rem;
+}
+.business-card.card-back {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.business-card.card-back .back-logo {
+    max-width:70%;
+    display:inline-flex;
+}
+.business-card.card-back .back-logo img {
+    flex:1;
+    width:100%;
 }
