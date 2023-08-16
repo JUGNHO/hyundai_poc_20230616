@@ -298,6 +298,9 @@
     font-family:HyundaiTextMedium,sans-serif;
     color:#121212;
 }
+.modal-body .business-card {
+    zoom:0.8;
+}
 .business-card.card-front {
     display:flex;
     flex-direction:column;
@@ -360,4 +363,42 @@
 .business-card.card-back .back-logo img {
     flex:1;
     width:100%;
+}
+
+.carousel-item-desc {
+    text-align:center;
+    padding: .5rem 0;
+    background-color:#052061;
+    color:#fff;
+    font-size:1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width:7%;
+    color:#aaa;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background:none;
+    font-size:3rem;
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+    color:#052061;
+}
+
+.carousel-indicators li {
+    width:10px;
+    height:10px;
+    background-color:#aaa;
+}
+
+.carousel-indicators .active {
+    background-color:#052061;
 }
