@@ -36,17 +36,15 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <link rel="stylesheet" media="screen, print" href="css/notifications/sweetalert2/sweetalert2.bundle.css">
 
         <style>
-
             .modal-full{
                 max-width: 90%;
             }
-
-        </style>
-
-        <style>
-
-            #car-dt-basic-example td.highlighted {
-              background-color: #4c6ea7;
+            .highlighted {
+                background-color: #4c6ea7;
+            }
+            .reserved {
+                background-color: #a3a4a5;
+                color:#fff;
             }
 
         </style>
@@ -772,233 +770,314 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     <div class="panel-content p-0">
                                         <div class="panel-content">
 
-                                            <table id="car-dt-basic-example" class="table table-bordered table-hover table-striped w-30" style="overflow-y:scroll;">
-                                                <thead>
-                                                    <tr>
-                                                        <th>MODEL</th>
-                                                        <th>PLATE NUMBER</th>
-                                                        <th>Driver</th>
-                                                        <th>Type</th>
-                                                        
-                                                        <th>08:00</th>
-                                                        <th>08:30</th>
-                                                        <th>09:00</th>
-                                                        <th>09:30</th>
-                                                        <th>10:00</th>
-                                                        <th>10:30</th>
-                                                        <th>11:00</th>
-                                                        <th>11:30</th>
-                                                        <th>12:00</th>
-                                                        <th>12:30</th>
-                                                        <th>13:00</th>
-                                                        <th>13:30</th>
-                                                        <th>14:00</th>
-                                                        <th>14:30</th>
-                                                        <th>15:00</th>
-                                                        <th>15:30</th>
-                                                        <th>16:00</th>
-                                                        <th>16:30</th>
-                                                        <th>17:00</th>
-                                                        <th>17:30</th>
-                                                        <th>18:00</th>
-                                                        
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>ALMAZ1</td>
-                                                        <td>B 1679 HM1</td>
-                                                        <td>Rifky1</td>
-                                                        <td>Operation Car1</td>
 
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
-                                                        <td class="drag-event"></td>
+                                            <div class="form-row">
+                                                
+                                                <div class="col-md-4 mb-3">
+                                                    <label class="form-label" for="simpleinput">Date Reservation</label>
+                                                    <input type="date" id="simpleinput" class="form-control" placeholder="Bekasi">
+                                                </div>
 
-                                                    </tr>
+                                                <div class="col-md-4 mb-3 ">
+                                                    <label class="form-label" for="simpleinput">Car type</label>
+                                                    <select class="form-control" id="example-select">
+                                                        <option>ALMAZ1</option>
+                                                        <option>ALMAZ2</option>
+                                                        <option>ALMAZ3</option>
+                                                        <option>ALMAZ4</option>
+                                                        <option>ALMAZ5</option>
+                                                    </select>
+                                                </div>
 
-                                                    <tr>
-                                                        <td>ALMAZ2</td>
-                                                        <td>B 1679 HM2</td>
-                                                        <td>Rifky2</td>
-                                                        <td>Operation Car2</td>
+                                                <div class="col-md-2 mb-3 ">
+                                                    <label class="form-label" for="simpleinput">Start Time</label>
+                                                    <select class="form-control" id="example-select">
+                                                        <option>08:00</option>
+                                                        <option>08:30</option>
+                                                        <option>09:00</option>
+                                                        <option>09:30</option>
+                                                        <option>10:00</option>
+                                                        <option disabled>10:30</option>
+                                                        <option disabled>11:00</option>
+                                                        <option disabled>11:30</option>
+                                                        <option disabled>12:00</option>
+                                                        <option>12:30</option>
+                                                        <option>13:00</option>
+                                                        <option>13:30</option>
+                                                        <option>14:00</option>
+                                                        <option>14:30</option>
+                                                        <option>15:00</option>
+                                                        <option>15:30</option>
+                                                        <option>16:00</option>
+                                                        <option>16:30</option>
+                                                        <option>17:00</option>
+                                                        <option>17:30</option>
+                                                        <option>18:00</option>
 
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                    </select>
+                                                </div>
 
-                                                    </tr>
+                                                <div class="col-md-2 mb-3 ">
+                                                    <label class="form-label" for="simpleinput">End Time</label>
 
-                                                    <tr>
-                                                        <td>ALMAZ3</td>
-                                                        <td>B 1679 HM3</td>
-                                                        <td>Rifky3</td>
-                                                        <td>Operation Car3</td>
+                                                    <select class="form-control" id="example-select">
+                                                        <option>08:00</option>
+                                                        <option>08:30</option>
+                                                        <option>09:00</option>
+                                                        <option>09:30</option>
+                                                        <option>10:00</option>
+                                                        <option disabled>10:30</option>
+                                                        <option disabled>11:00</option>
+                                                        <option disabled>11:30</option>
+                                                        <option disabled>12:00</option>
+                                                        <option>12:30</option>
+                                                        <option>13:00</option>
+                                                        <option>13:30</option>
+                                                        <option>14:00</option>
+                                                        <option>14:30</option>
+                                                        <option>15:00</option>
+                                                        <option>15:30</option>
+                                                        <option>16:00</option>
+                                                        <option>16:30</option>
+                                                        <option>17:00</option>
+                                                        <option>17:30</option>
+                                                        <option>18:00</option>
 
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                    </select>
+                                                </div>
 
-                                                    </tr>
+                                            </div>
 
-                                                    <tr>
-                                                        <td>ALMAZ4</td>
-                                                        <td>B 1679 HM4</td>
-                                                        <td>Rifky4</td>
-                                                        <td>Operation Car4</td>
 
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>ALMAZ5</td>
-                                                        <td>B 1679 HM5</td>
-                                                        <td>Rifky5</td>
-                                                        <td>Operation Car5</td>
-
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>ALMAZ6</td>
-                                                        <td>B 1679 HM6</td>
-                                                        <td>Rifky6</td>
-                                                        <td>Operation Car6</td>
-
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-
-                                                    </tr>
-                                                  
-                                                   
+                                            <div class="form-row d-none d-md-block">
+                                                <div class="col-md-12 mb-3 ">
                                                     
-                                                </tbody>
-                                            <!-- <tfoot>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Office</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Salary</th>
-                                                </tr>
-                                            </tfoot> -->
-                                        </table>
+                                                    <table id="car-dt-basic-example" class="table table-bordered table-hover table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>MODEL</th>
+                                                                <th>PLATE NUMBER</th>
+                                                                <th>Driver</th>
+                                                                <th>Type</th>
+                                                                
+                                                                <th>08:00</th>
+                                                                <th>08:30</th>
+                                                                <th>09:00</th>
+                                                                <th>09:30</th>
+                                                                <th>10:00</th>
+                                                                <th>10:30</th>
+                                                                <th>11:00</th>
+                                                                <th>11:30</th>
+                                                                <th>12:00</th>
+                                                                <th>12:30</th>
+                                                                <th>13:00</th>
+                                                                <th>13:30</th>
+                                                                <th>14:00</th>
+                                                                <th>14:30</th>
+                                                                <th>15:00</th>
+                                                                <th>15:30</th>
+                                                                <th>16:00</th>
+                                                                <th>16:30</th>
+                                                                <th>17:00</th>
+                                                                <th>17:30</th>
+                                                                <th>18:00</th>
+                                                                
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>ALMAZ1</td>
+                                                                <td>B 1679 HM1</td>
+                                                                <td>Rifky1</td>
+                                                                <td>Operation Car1</td>
+
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+                                                                <td class="drag-event"></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>ALMAZ2</td>
+                                                                <td>B 1679 HM2</td>
+                                                                <td>Rifky2</td>
+                                                                <td>Operation Car2</td>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="reserved">Reserved</td>
+                                                                <td class="reserved">Reserved</td>
+                                                                <td class="reserved">Reserved</td>
+                                                                <td class="reserved">Reserved</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>ALMAZ3</td>
+                                                                <td>B 1679 HM3</td>
+                                                                <td>Rifky3</td>
+                                                                <td>Operation Car3</td>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>ALMAZ4</td>
+                                                                <td>B 1679 HM4</td>
+                                                                <td>Rifky4</td>
+                                                                <td>Operation Car4</td>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>ALMAZ5</td>
+                                                                <td>B 1679 HM5</td>
+                                                                <td>Rifky5</td>
+                                                                <td>Operation Car5</td>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>ALMAZ6</td>
+                                                                <td>B 1679 HM6</td>
+                                                                <td>Rifky6</td>
+                                                                <td>Operation Car6</td>
+
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                          
+                                                           
+                                                            
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+
+                                                
+
+                                            </div>
+
+                                        </div>
+
 
                                     </div>
 
@@ -1077,12 +1156,40 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 setTimeout(function(){
 
                     $('#car-dt-basic-example').dataTable({
-                        //responsive: true, // not compatible
+
+                        dom:
+                        /*  --- Layout Structure 
+                            --- Options
+                            l   -   length changing input control
+                            f   -   filtering input
+                            t   -   The table!
+                            i   -   Table information summary
+                            p   -   pagination control
+                            r   -   processing display element
+                            B   -   buttons
+                            R   -   ColReorder
+                            S   -   Select
+
+                            --- Markup
+                            < and >             - div element
+                            <"class" and >      - div with a class
+                            <"#id" and >        - div with an ID
+                            <"#id.class" and >  - div with an ID and a class
+
+                            --- Further reading
+                            https://datatables.net/reference/option/dom
+                            --------------------------------------
+                         */
+                        "<'row mb-3'<'col-sm-12 col-md-5 d-flex align-items-center justify-content-start' ><'col-sm-12 col-md-7 d-flex align-items-center justify-content-end' >>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+
+                        // responsive: true, // not compatible
                         scrollY: 400,
                         scrollX: true,
                         scrollCollapse: true,
                         paging: false,
-                        //fixedColumns:   true,
+                        // fixedColumns:   true,
                         fixedColumns:
                         {
                             leftColumns: 4
@@ -1098,15 +1205,31 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                         $("#car-dt-basic-example td")
                             .mousedown(function() {
+
+                                if($(this).hasClass('reserved')){
+                                    alert('Cannot use this time.');
+                                    isMouseDown = false;
+                                    e.preventDefault();
+                                    return;
+                                }
+
                                 isMouseDown = true;
+
                                 $(this).toggleClass("highlighted");
                                 isHighlighted = $(this).hasClass("highlighted");
                                 return false; // prevent text selection
                             })
-                            .mouseover(function() {
-                                if (isMouseDown) {
-                                    $(this).toggleClass("highlighted", isHighlighted);
+                            .mouseover(function(e) {
+                                if(isMouseDown && $(this).hasClass('reserved')){
+                                    alert('Cannot use this time.');
+                                    isMouseDown = false;
+                                    e.preventDefault();
+                                }else{
+                                    if (isMouseDown) {
+                                        $(this).toggleClass("highlighted", isHighlighted);
+                                    }    
                                 }
+                                
                             })
                             .bind("selectstart", function() {
                                 return false;
