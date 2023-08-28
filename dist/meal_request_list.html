@@ -570,7 +570,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                             </div>
                                                             <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="Daniel">
                                                             <div class="input-group-append">
-                                                                <button id="btn_nik_search" class="btn btn-default" type="button">Search</button>
+                                                                <button id="btn_nik_search" class="btn btn-default " type="button"   >Search</button>
                                                             </div>
                                                         </div>
 
@@ -697,6 +697,45 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                                 </div>
 
+
+                                                <div class="form-row">
+                                                    
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Price/Meal</label>
+                                                        <select class="form-control" id="example-select">
+                                                            <option>Indonesian</option>
+                                                            <option>Korean</option>
+                                                        </select>
+                                                        
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Price</label>
+                                                        
+                                                        <div class="input-group input-group-sm bg-white shadow-inset-2">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
+                                                                    <i class="fal fa-info"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-default " type="button" id="btn_info" > Info</button>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Total Price</label>
+                                                        <input type="text" id="simpleinput" class="form-control" placeholder="">
+                                                    </div>
+
+                                                </div>
+
+
                                             </div>
 
                                         </form>
@@ -748,6 +787,15 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
 
             $(document).ready(function(){
+
+                $('#btn_info').popover({
+                    title: 'Information',
+                    content : 'Kore dd.. <br> OK',
+                    placement: 'top',
+                    trigger: 'hover', 
+                    html: true
+
+                });
 
                 loadMenuActive('user_meal_request_list');
 
