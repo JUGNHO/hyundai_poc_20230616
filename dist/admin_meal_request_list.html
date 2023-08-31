@@ -304,6 +304,40 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                             </div>
 
+                                            <div class="row">
+                                                <div class="col-sm-6 col-xl-4">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="simpleinput">Date</label>
+                                                        <div class="input-daterange input-group" id="datepicker-5">
+                                                            <input type="text" class="form-control" name="startdate">
+                                                            <div class="input-group-append input-group-prepend">
+                                                                <span class="input-group-text fs-xl"><i class="fal fa-ellipsis-h"></i></span>
+                                                            </div>
+                                                            <input type="text" class="form-control" name="enddate">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 
+                                                <div class="col-sm-6 col-xl-4">
+                                                    <div class="form-group">
+                                                        <label>Step</label>
+                                                        <select class="js-bg-color custom-select">
+                                                            <option value="border-primary"></option>
+                                                            <option value="border-primary">Inprogress request approval</option>
+                                                            <option value="border-primary">New</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-6 col-xl-4">
+                                                    <div class="form-group">
+                                                        <label>Requester</label>
+                                                        <input type="text" class="form-control" name="enddate">
+                                                    </div>
+                                                </div> 
+                                                -->
+                                            </div>
+
                                             <hr>
 
 
@@ -312,19 +346,24 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                     <tr>
                                                         <th>#</th>
                                                         <th>NO</th>
-                                                        <th>ID Number</th>
+                                                        <th>NIK</th>
                                                         <th>Name</th>
                                                         <th>Position</th>
-                                                        <th>Dept. Name</th>
-                                                        <th>Group Name</th>
-                                                        <th>App type</th>
-                                                        <th>Carteen</th>
+                                                        <th>Department</th>
+                                                        <th>Email</th>
                                                         <th>Reason</th>
+                                                        <th>Company/Guest</th>
+                                                        <th>Carteen</th>
                                                         <th>Total persons</th>
                                                         <th>Date</th>
                                                         <th>Time</th>
-                                                        <th>Status Request</th>
-                                                        <th>Registration Date</th>
+                                                        <th>Price</th>
+                                                        <th>Total Price</th>
+                                                        <th>Code Budget</th>
+                                                        <th>GL Accout</th>
+                                                        <th>Status</th>
+                                                        <th>Submit Date</th>
+                                                        <th>Approved Date</th>
 
                                                     </tr>
                                                 </thead>
@@ -336,34 +375,43 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <td>Daniel</td>
                                                         <td>Sr. Spec</td>
                                                         <td>BS</td>
-                                                        <td>Business Administrator</td>
-                                                        <td>Meal Request</td>
-                                                        <td>Indonesian</td>
+                                                        <td>BS@hmmi.com</td>
                                                         <td>Reason Text xxx</td>
-                                                        <td>1</td>
+                                                        <td>xxx</td>
+                                                        <td>Indonesian</td>
+                                                        <td>2</td>
                                                         <td>2019/04/02</td>
-                                                        <td>09:00</td>
+                                                        <td>09:00 AM</td>
+                                                        <td>27,200</td>
+                                                        <td>54,400</td>
+                                                        <td>xxxxxx</td>
+                                                        <td>xxxxxx</td>
                                                         <td>In Approval</td>
+                                                        <td>30-10-2022</td>
                                                         <td>30-10-2022</td>
                                                     </tr>
                                                     <tr>
                                                         <td><input type="checkbox"></td>
-                                                        <td>2</td>
+                                                        <td>1</td>
                                                         <td>62200147</td>
                                                         <td>Daniel</td>
                                                         <td>Sr. Spec</td>
                                                         <td>BS</td>
-                                                        <td>Business Administrator</td>
-                                                        <td>Meal Request</td>
-                                                        <td>Korean</td>
+                                                        <td>BS@hmmi.com</td>
                                                         <td>Reason Text xxx</td>
+                                                        <td>xxx</td>
+                                                        <td>Indonesian</td>
                                                         <td>2</td>
                                                         <td>2019/04/02</td>
-                                                        <td>09:00</td>
+                                                        <td>09:00 AM</td>
+                                                        <td>27,200</td>
+                                                        <td>54,400</td>
+                                                        <td>xxxxxx</td>
+                                                        <td>xxxxxx</td>
                                                         <td>In Approval</td>
                                                         <td>30-10-2022</td>
+                                                        <td>30-10-2022</td>
                                                     </tr>
-                                                   
                                                     
                                                 </tbody>
                                                 <!-- <tfoot>
@@ -525,6 +573,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <!-- END Page Wrapper -->
 
         <!-- Modal Large -->
+        <!--
         <div class="modal fade" id="default-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -590,35 +639,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                             <label class="form-label" for="simpleinput">Group</label>
                                                             <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration">
                                                         </div>
-
-
                                                     </div>
-
-                                                    <!-- <div class="form-row">
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Home Address</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Telephone</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Mobile</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
-                                                    </div> 
-
-                                                    <div class="form-row">
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Email</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
-
-                                                    </div>
-                                                    -->
 
                                                 </div>
                                             </form>
@@ -627,7 +648,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                     </div>
                                 </div>
-
                                 
                                 <div class="panel">
                                     <div class="panel-hdr">
@@ -712,6 +732,199 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div>
+        -->
+
+
+
+        <div class="modal fade" id="default-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Application Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="regist_form" class="needs-validation" novalidate>
+                        
+                            <input type="hidden" id="doc_num" name="doc_num" value="">
+                            <input type="hidden" id="data_status" name="data_status" value="">
+                            
+                            <div class="col-xl-12">
+                                <div class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            User Information <span class="fw-300"><i></i></span>
+                                        </h2>
+                                    </div>
+                                    <div class="panel-container show">
+    
+                                        <div class="panel-content p-0">
+                                            <div class="panel-content">
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">NIK</label>
+                                                        <input type="text" id="requester_nik" name="requester_nik" class="form-control" value="" readonly>
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Name</label>
+
+                                                        <div class="input-group input-group-md bg-white shadow-inset-2">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
+                                                                    <i class="fal fa-search"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" id="requester_name" name="requester_name" class="form-control border-left-0 bg-transparent pl-0" value="" readonly>
+                                                            <div class="input-group-append">
+                                                                <button id="btn_nik_search" class="btn btn-default" type="button">Search</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Position</label>
+                                                        <input type="text" id="requester_position_text" name="requester_position_text" class="form-control" value="" readonly>
+                                                        <input type="hidden" id="requester_position" name="requester_position" value="" >
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Department</label>
+                                                        <input type="text" id="requester_department_text" name="requester_department_text" class="form-control" value="" readonly>
+                                                        <input type="hidden" id="requester_department" name="requester_department" value="">
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Group</label>
+                                                        <input type="text" id="requester_group_text" name="requester_group_text" class="form-control" value="" readonly>
+                                                        <input type="hidden" id="requester_group" name="requester_group" value="">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Meal Request <span class="fw-300"><i> </i></span>
+                                        </h2>
+                                    </div>
+                                    <div class="panel-container show">
+                                        <div class="panel-content p-0">
+                                            <div class="panel-content">
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Email</label>
+                                                        <input type="email" id="email" name="email" value="" class="form-control" >
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Mobile</label>
+                                                        <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">    
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Reason Request</label>
+                                                        <input type="text" class="form-control" id="reason_request" name="reason_request" value="">
+                                                    </div>                                                
+                                                </div>
+
+                                                <div class="form-row"> 
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Company / Guest</label>
+                                                        <input type="text" id="company_guest" name="company_guest" class="form-control" placeholder="" value=""> 
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Canteen</label>
+                                                        <select class="form-control" id="canteen" name="canteen">
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row"> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Total Persons</label>
+                                                        <input type="number" id="total_persons" name="total_persons" class="form-control" value="1">
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Date</label>
+                                                        <input class="form-control" type="text" id="meal_date" name="meal_date" value="">
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Time</label>
+                                                        <input type="time" class="form-control" id="meal_time" name="meal_time" step="1" value="">
+                                                    </div>                                                                                                       
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Meal Type (Price / Meal)</label>
+                                                        <select class="form-control" id="meal_type" name="meal_type">
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Price</label>
+                                                        
+                                                        <div class="input-group input-group-md bg-white">
+                                                            <input type="text" class="form-control" id="meal_price" name="meal_price" value="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-default" type="button" id="btn_info" ><i class="fal fa-info"></i></button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Total Price</label>
+                                                        <input type="text" class="form-control" id="total_price" name="total_price" value=""> 
+                                                        <!-- value = price * total_person -->
+                                                    </div>
+                                                </div>
+
+                                                <hr>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">GL Account</label>
+                                                        <input type="text" id="gl_account" name="gl_account" value="" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Budget Code</label>
+                                                        <input type="text" id="budget_code" name="budget_code" value="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
         <!-- DOC: script to save and load page settings -->
         <script src="js/setting.bundle.js"></script>
@@ -824,14 +1037,14 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             name: 'excel',
                             className: 'btn-primary btn-sm mr-1'
                         },
-                        {
+                        /*{
                             text: '<i class="fal fa-edit mr-1"></i> Edit',
                             name: 'edit',
                             className: 'btn-success btn-sm mr-1',
                             action: function ( e, dt, node, config ) {
                                 $('#default-example-modal-lg').modal('show');
                             }
-                        },
+                        },*/
                         {
                             text: '<i class="fal fa-save mr-1"></i> Approved',
                             name: 'approved',
@@ -898,6 +1111,11 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     ]
                 });
 
+            });
+
+            $('#dt-basic-example').on('dblclick', 'tr', function () {
+                // let name = $('td', this).eq(1).text();
+                $('#default-example-modal-lg').modal('show');
             });
 
         </script>
