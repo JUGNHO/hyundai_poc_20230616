@@ -778,7 +778,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                     <input type="date" id="simpleinput" class="form-control" placeholder="Bekasi">
                                                 </div>
 
-                                                <div class="col-md-4 mb-3 ">
+                                                <div class="col-md-4 mb-3 d-xs-block d-sm-block d-md-none ">
                                                     <label class="form-label" for="simpleinput">Car type</label>
                                                     <select class="form-control" id="example-select">
                                                         <option>ALMAZ1</option>
@@ -789,7 +789,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                     </select>
                                                 </div>
 
-                                                <div class="col-md-2 mb-3 ">
+                                                <div class="col-md-4 mb-3 d-xs-block d-sm-block d-md-none ">
                                                     <label class="form-label" for="simpleinput">Start Time</label>
                                                     <select class="form-control" id="example-select">
                                                         <option>08:00</option>
@@ -797,10 +797,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <option>09:00</option>
                                                         <option>09:30</option>
                                                         <option>10:00</option>
-                                                        <option disabled>10:30</option>
-                                                        <option disabled>11:00</option>
-                                                        <option disabled>11:30</option>
-                                                        <option disabled>12:00</option>
+                                                        <option disabled>10:30 (Reversed)</option>
+                                                        <option disabled>11:00 (Reversed)</option>
+                                                        <option disabled>11:30 (Reversed)</option>
+                                                        <option disabled>12:00 (Reversed)</option>
                                                         <option>12:30</option>
                                                         <option>13:00</option>
                                                         <option>13:30</option>
@@ -817,7 +817,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                     </select>
                                                 </div>
 
-                                                <div class="col-md-2 mb-3 ">
+                                                <div class="col-md-4 mb-3 d-xs-block d-sm-block d-md-none ">
                                                     <label class="form-label" for="simpleinput">End Time</label>
 
                                                     <select class="form-control" id="example-select">
@@ -826,10 +826,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <option>09:00</option>
                                                         <option>09:30</option>
                                                         <option>10:00</option>
-                                                        <option disabled>10:30</option>
-                                                        <option disabled>11:00</option>
-                                                        <option disabled>11:30</option>
-                                                        <option disabled>12:00</option>
+                                                        <option disabled>10:30 (Reversed)</option>
+                                                        <option disabled>11:00 (Reversed)</option>
+                                                        <option disabled>11:30 (Reversed)</option>
+                                                        <option disabled>12:00 (Reversed)</option>
                                                         <option>12:30</option>
                                                         <option>13:00</option>
                                                         <option>13:30</option>
@@ -1097,7 +1097,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div>
-
         <!-- DOC: script to save and load page settings -->
         <script src="js/setting.bundle.js"></script>
         <!-- base vendor bundle: 
@@ -1240,98 +1239,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             .mouseup(function() {
                                 isMouseDown = false;
                             });
-
-
-
-                        // $('.drag-event')
-
-                        //     .on("mousedown", function (event) {
-
-                        //         if($(this).hasClass('on')){
-                        //             $(this).removeClass('on');
-                        //             $(this).css('background-color','');
-                        //         }else{
-                        //             $(this).addClass('on');
-                        //             $(this).css('background-color','red');
-                        //         }
-
-                        //     }).on("mousemove", function (event) {
-
-                        //         // if($(this).hasClass('on')){
-                        //         //     $(this).removeClass('on');
-                        //         //     $(this).css('background-color','');
-                        //         // }else{
-                        //         //     $(this).addClass('on');
-                        //         //     $(this).css('background-color','red');
-                        //         // }
-
-                        //     }).on("mouseup", function (event) {
-
-                        //         if($(this).hasClass('on')){
-                        //             $(this).removeClass('on');
-                        //             $(this).css('background-color','');
-                        //         }else{
-                        //             $(this).addClass('on');
-                        //             $(this).css('background-color','red');
-                        //         }
-
-                        //     });
-
-                        // .on("dragstart", function (event) {
-
-                        //     console.log('test dragstart');
-
-                        //     //var dt = event.originalEvent.dataTransfer;
-                        //     //dt.setData('Text', $(this).attr('id'));
-
-                        //     if($(this).hasClass('on')){
-                        //         $(this).removeClass('on');
-                        //         $(this).css('background-color','');
-                        //     }else{
-                        //         $(this).addClass('on');
-                        //         $(this).css('background-color','red');
-                        //     }
-                            
-
-                        // }).on("dragenter", function (event) {  
-
-                        //     console.log('test dragenter');
-                        //     event.preventDefault(); // 드롭 허용
-
-                        //     if($(this).hasClass('on')){
-                        //         $(this).removeClass('on');
-                        //         $(this).css('background-color','');
-                        //     }else{
-                        //         $(this).addClass('on');
-                        //         $(this).css('background-color','red');
-                        //     }
-
-                        // }).on("dragover", function (event) {  
-
-                        //     event.preventDefault(); // 드롭 허용    
-                        //     console.log('test dragover');
-                            
-                        //     if($(this).hasClass('on')){
-                        //         $(this).removeClass('on');
-                        //         $(this).css('background-color','');
-                        //     }else{
-                        //         $(this).addClass('on');
-                        //         $(this).css('background-color','red');
-                        //     }
-                           
-                        // }).on("drop", function (event) {  
-
-                        //     console.log('test drop');
-
-                        //     if($(this).hasClass('on')){
-                        //         $(this).removeClass('on');
-                        //         $(this).css('background-color','');
-                        //     }else{
-                        //         $(this).addClass('on');
-                        //         $(this).css('background-color','red');
-                        //     }
-
-                        // });
 
 
                     },1000);
