@@ -552,7 +552,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             <div class="panel">
                                     <div class="panel-hdr">
                                         <h2>
-                                            Requester <span class="fw-300"><i> </i></span>
+                                            User Information <span class="fw-300"><i> </i></span>
                                         </h2>
                                     </div>
                                     <div class="panel-container show">
@@ -560,15 +560,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                         <div class="panel-content p-0">
                                             <form class="needs-validation" novalidate>
                                                 <div class="panel-content">
-
-                                                    <!-- Approval only -->
-                                                    <div class="panel-tag">
-                                                        Registrartion Information of courier<p>
-                                                        Approval that already approved by HOD, can upload this system<p>
-                                                        <span><strong>Weight:__________</strong></span> <span><strong> Dimension:___________</strong></span>
-                                                    </div>
-                                                    <!-- /Approval only -->
-
                                                     <div class="form-row">
                                                         <div class="col-md-4 mb-3">
                                                             <label class="form-label" for="simpleinput">NIK</label>
@@ -578,7 +569,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <div class="col-md-4 mb-3">
                                                             <label class="form-label" for="simpleinput">Name</label>
 
-                                                            <div class="input-group input-group-sm bg-white shadow-inset-2">
+                                                            <div class="input-group input-group-md bg-white shadow-inset-2">
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
                                                                         <i class="fal fa-search"></i>
@@ -624,131 +615,242 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                 <div class="panel">
                                     <div class="panel-hdr">
-                                        <h2>
-                                            Courier Service
+                                        <h2> 
+                                            Courier Service <span class="fw-300"><i> </i></span>
                                         </h2>
                                     </div>
                                     <div class="panel-container show">
-
+                                    
                                         <div class="panel-content p-0">
-                                            <form class="needs-validation" novalidate>
-                                                <div class="panel-content">
-                                                    <div class="form-row">
-                                                        <div class="col-md-3 mb-3">
-                                                            <label class="form-label" for="simpleinput">Classification</label>
-                                                            <select class="form-control" id="example-select">
-                                                                <option>Domestic</option>
-                                                                <option>Overseas</option>
-                                                            </select>
+                                            <div class="panel-content">
+                                                <div class="form-row">
+                                                    <div class="col-md-3 mb-3">
+                                                        <label class="form-label" for="simpleinput">Classification</label>
+                                                        <select class="form-control" id="classification" name="classification">
+                                                            <option>Domestic</option>
+                                                            <option>International</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-3 mb-3">
+                                                        <label class="form-label" for="simpleinput">Post Type</label>
+                                                        <select class="form-control" id="post_type" name="post_type">
+                                                            <option>JNE</option>
+                                                            <option>FedEx</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <!-- Requester only  -->
+                                                    <div class="col-md-3 mb-3">
+                                                        <label class="form-label" for="simpleinput">Service Type</label>
+                                                        <select class="form-control" id="service_type" name="service_type">
+                                                            <option>YES</option>
+                                                            <option>REG</option>
+                                                            <option>IP</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-3 mb-3">
+                                                        <label class="form-label" for="simpleinput">Items Type</label>
+                                                        <select class="form-control" id="items_type" name="items_type">
+                                                            <option>Document</option>
+                                                            <option>Package</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                    
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Qty</label>
+                                                        <input type="number" id="qty" name="qty" class="form-control" placeholder="1" value="1">
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Weight(kg)</label>
+                                                        <input type="number" id="weight" name="weight" class="form-control" placeholder="1" value="1">
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Dimension</label>
+                                                        <input type="number" id="dimension" name="dimension" class="form-control" placeholder="1" value="1">
+                                                    </div>
+                                                </div>
+                                                    
+                                                <div class="form-row" id="file_div" style="display:none;">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validation_commercial_file" class="form-label">Commercial Invoice File
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="commercial_invoice_file" name="commercial_invoice_file"  required>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
                                                         </div>
-
-                                                        <div class="col-md-3 mb-3">
-                                                            <label class="form-label" for="simpleinput">Post Type</label>
-                                                            <select class="form-control" id="example-select">
-                                                                <option>JNE</option>
-                                                                <option>FedEx</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="col-md-3 mb-3">
-                                                            <label class="form-label" for="simpleinput">Qty</label>
-                                                            <input type="number" id="simpleinput" class="form-control" placeholder="1">
-                                                        </div>
-
-                                                        <div class="col-md-3 mb-3">
-                                                            <label class="form-label" for="simpleinput">Weight(kg)</label>
-                                                            <input type="number" id="simpleinput" class="form-control" placeholder="1">
+                                                        
+                                                        <div id="commercial_file_list" style="margin-top:10px;">
                                                         </div>
                                                         
                                                     </div>
-
-                                                    <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label">Packing List File
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="packing_list_file" name="packing_list_file" required>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
                                                         
-
+                                                        <div id="pakcing_file_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
                                                     </div>
-
-                                                    <hr>
-                                                    <div class="form-row">
-                                                        
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label" for="simpleinput">Sender</label>
-                                                            <input type="text" id="simpleinput" class="form-control " readonly placeholder="">
-                                                        </div>
-
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label" for="simpleinput">Source (Address)</label>
-                                                            <input type="text" id="simpleinput" class="form-control " readonly placeholder="">
-                                                        </div>
-
+                                                </div>
+                                                    
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Content of Items</label>
+                                                        <input type="text" id="content_items" name="content_items" class="form-control"  value="">
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Purpose</label>
+                                                        <input type="text" id="purpose" name="purpose" class="form-control"  value="">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">GL Account</label>
+                                                        <input type="text" id="gl_account" name="gl_account" class="form-control " placeholder="" value="">
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Budget Code</label>
+                                                        <input type="text" id="budget_code" name="budget_code" class="form-control " placeholder="" value="">
+                                                    </div>
+                                                </div>
+                                                    
+                                                    
+                                                <hr>
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Sender</label>
+                                                        <input type="text" id="sender" name="sender" class="form-control" placeholder="" value="" readonly>
+                                                    </div>
+                                                </div>
+                                                    
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Sender Source (Address)</label>
+                                                        <input type="text" id="sender_source" name="sender_source" class="form-control" placeholder="" value="" readonly>
+                                                    </div>
+                                                </div>
+                                                
+                                                <hr>
+                                                    
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Receiver</label>
+                                                        <input type="text" id="receiver" name="receiver" class="form-control"  placeholder="" value="" >
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Receiver Company</label>
+                                                        <input type="text" id="receiver_company" name="receiver_company" class="form-control"  placeholder="" value="" >
+                                                    </div>
+                                                </div>
+                                                    
                                                        
+                                                <!-- City, postcode, receiver company, phone/mobile Number add -->
+                                                <!-- 
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">City</label>
+                                                        <input type="text" id="receiver_city" name="receiver_city" class="form-control"  placeholder="" value="" >
                                                     </div>
-                                                        
-                                                    <hr>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label" for="simpleinput">Receiver</label>
-                                                            <input type="text" id="simpleinput" class="form-control " readonly placeholder="">
-                                                        </div>
-
-                                                       
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label" for="simpleinput">Source (Address)</label>
-
-                                                            <div class="input-group input-group-sm bg-white shadow-inset-2">
-                                                                <div class="input-group-prepend">
-                                                                    <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
-                                                                        <i class="fal fa-search"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="Address">
-                                                                <div class="input-group-append">
-                                                                    <button class="btn btn-default" type="button">Search</button>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Postal Code</label>
+                                                        <input type="text" id="receiver_postal_code" name="receiver_postal_code" class="form-control"  placeholder=""  value="" >
                                                     </div>
-                                                    <hr>
-
-                                                        
-                                                    <!-- Requester only -->
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label" for="simpleinput">GL Account</label>
-                                                            <input type="text" id="simpleinput" class="form-control " placeholder="">
-                                                        </div>
-
-
-
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label" for="simpleinput">BudgetCode</label>
-                                                            <input type="text" id="simpleinput" class="form-control " placeholder="">
-                                                        </div>
-
+                                                    
+                                                </div> 
+                                                -->
+                                                    
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Receiver Source (Address)</label>
+                                                        <input type="text" id="receiver_source" name="receiver_source" class="form-control" placeholder="Address" value="">
                                                     </div>
-                                                    <!-- /Requester only -->
-
-                                                    <!-- Approval only -->
-                                                    <div class="form-row">
-                                                        <div class="col-md-12 mb-3">
-                                                            <label class="form-label" for="simpleinput">Description of post</label>
-                                                            <input type="text" id="simpleinput" class="form-control " placeholder="Fill description">
-                                                        </div>
-
+                                                </div>
+                                                    
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Receiver Phone Number</label>
+                                                        <input type="text" id="receiver_phone_num" name="receiver_phone_num" class="form-control"  placeholder="" >
                                                     </div>
-                                                    <!-- /Approval only -->
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Receiver Mobile Number</label>
+                                                        <input type="text" id="receiver_mobile_num" name="receiver_mobile_num" class="form-control"  placeholder="" >
+                                                    </div>
+                                                </div>
+                                                                                                
+                                            </div>
+                                        </div>
+                     
+                                    </div>
+                                </div>
+
+                                <div class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Requester <span class="fw-300"><i> </i></span>
+                                        </h2>
+                                    </div>
+                                    <div class="panel-container show">
+    
+                                        <div class="panel-content p-0">
+                                            <div class="panel-content">
+                                                <!-- 
+                                                <div class="form-row" style="display:none;">
+                                                
+                                                    Approval only 
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Process Status</label>
+                                                        <input type="text" id="process_status" name="process_status" class="form-control" placeholder="">
+                                                    </div>
+                                                
+                                                </div> -->
+                                            
+                                                <div class="form-row">
+
+                                                    <!-- Approval only --> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Application Date</label>
+                                                        <input class="form-control" type="text" id="application_date" name="application_date"  name="date" value="">
+                                                    </div>
+                                                    
+                                                    <!-- Approval only --> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Applicator ID No.</label>
+                                                        <input type="number" id="application_id" name="application_id" class="form-control" placeholder="62200147" value="">
+                                                    </div>
+
+                                                    <!-- Approval only --> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Applicator Name</label>
+                                                        <input type="text" id="application_name" name="application_name" class="form-control" placeholder="Daniel" value="">
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <div class="form-row" >
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="example-textarea">Reject Reason</label>
+                                                        <textarea class="form-control" id="reject_reason" name="reject_reason" rows="5" readonly="readonly"></textarea>
+                                                    </div>
 
 
                                                 </div>
-                                            </form>
-                                        </div>
 
-                                       <!-- 
-                                        <div class="panel-content border-faded border-left-0 border-right-0 border-bottom-0 d-flex flex-row">
-                                            <button class="btn btn-primary ml-auto waves-effect waves-themed" type="submit">Save</button>
-                                        </div> 
-                                        -->
+                                            </div>
+                                        </div>
+    
                                     </div>
                                 </div>
 

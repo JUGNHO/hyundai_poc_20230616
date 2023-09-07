@@ -304,87 +304,98 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                             </div>
 
+                                            <div class="row">
+                                                <div class="col-sm-6 col-xl-4">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="simpleinput">Date</label>
+                                                        <div class="input-daterange input-group" id="datepicker-5">
+                                                            <input type="text" class="form-control" name="startdate">
+                                                            <div class="input-group-append input-group-prepend">
+                                                                <span class="input-group-text fs-xl"><i class="fal fa-ellipsis-h"></i></span>
+                                                            </div>
+                                                            <input type="text" class="form-control" name="enddate">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-xl-4">
+                                                    <div class="form-group">
+                                                        <label>Status</label>
+                                                        <select class="js-bg-color custom-select">
+                                                            <option value="border-primary"></option>
+                                                            <option value="border-primary">Inprogress request approval</option>
+                                                            <option value="border-primary">New</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!-- 
+                                                <div class="col-sm-6 col-xl-4">
+                                                    <div class="form-group">
+                                                        <label>Requester</label>
+                                                        <input type="text" class="form-control" name="enddate">
+                                                    </div>
+                                                </div> 
+                                                -->
+                                            </div>
+
                                             <hr>
 
 
                                             <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
                                                 <thead>
                                                     <tr>
-
                                                         <th>#</th>
                                                         <th>NO</th>
-                                                        <th>Route Bus</th>
-                                                        <th>Status</th>
-                                                        <th>Dept. Name</th>                                                    
-                                                        <th>ID Number</th>
+                                                        <th>NIK</th>
                                                         <th>Name</th>
                                                         <th>Position</th>
-                                                        <th>Dept. Name</th>
-                                                        <th>Group Name</th>
-                                                        <th>App type</th>
+                                                        <th>Department</th>
+
+                                                        <th>Route Bus</th>
                                                         <th>Home Address</th>
                                                         <th>Telephone</th>
                                                         <th>Email</th>
-                                                        <th>Status Request</th>
-                                                        <th>Registration Date</th>
 
+                                                        <th>Status</th>
+                                                        <th>Submit Date</th>
+                                                        <th>Approved Date</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td><input type="checkbox"></td>
                                                         <td>1</td>
-                                                        <td>Cikarang1 - HMMI</td>
-                                                        <td>In approval</td>
-                                                        <td>BS</td>
                                                         <td>62200147</td>
                                                         <td>Daniel</td>
                                                         <td>Sr. Spec</td>
                                                         <td>BS</td>
-                                                        <td>Business Administrator</td>
-                                                        <td>Shuttle But</td>
+
+                                                        <td>Cikarang1 - HMMI</td>
                                                         <td>Cikarang xxx</td>
                                                         <td>+62 333</td>
                                                         <td>email@email.com</td>
-                                                        <td>In Approval</td>
-                                                        <td>30-10-2022</td>
+
+                                                        <td>In approval</td>
+                                                        <td>2023-03-10</td>
+                                                        <td>2023-03-10</td>
                                                     </tr>
                                                     <tr>
                                                         <td><input type="checkbox"></td>
-                                                        <td>2</td>
-                                                        <td>Cikarang1 - HMMI</td>
-                                                        <td>In approval</td>
-                                                        <td>BS</td>
+                                                        <td>1</td>
                                                         <td>62200147</td>
                                                         <td>Daniel</td>
                                                         <td>Sr. Spec</td>
                                                         <td>BS</td>
-                                                        <td>Business Administrator</td>
-                                                        <td>Shuttle But</td>
-                                                        <td>Cikarang xxx</td>
-                                                        <td>+62 333</td>
-                                                        <td>email@email.com</td>
-                                                        <td>In Approval</td>
-                                                        <td>30-10-2022</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><input type="checkbox"></td>
-                                                        <td>3</td>
+
                                                         <td>Cikarang1 - HMMI</td>
-                                                        <td>In approval</td>
-                                                        <td>BS</td>
-                                                        <td>62200147</td>
-                                                        <td>Daniel</td>
-                                                        <td>Sr. Spec</td>
-                                                        <td>BS</td>
-                                                        <td>Business Administrator</td>
-                                                        <td>Shuttle But</td>
                                                         <td>Cikarang xxx</td>
                                                         <td>+62 333</td>
                                                         <td>email@email.com</td>
-                                                        <td>In Approval</td>
-                                                        <td>30-10-2022</td>
+
+                                                        <td>In approval</td>
+                                                        <td>2023-03-10</td>
+                                                        <td>2023-03-10</td>
                                                     </tr>
+                                                
                                                 </tbody>
                                                 <!-- <tfoot>
                                                     <tr>
@@ -551,98 +562,76 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                         </button>
                     </div>
                     <div class="modal-body">
+                        <form class="needs-validation" novalidate>
                         
-                        <div class="col-xl-12">
+                            <div class="col-xl-12">
 
                                 <div class="panel">
                                     <div class="panel-hdr">
                                         <h2>
-                                            Requester <span class="fw-300"><i> </i></span>
+                                            User Information <span class="fw-300"><i> </i></span>
                                         </h2>
                                     </div>
                                     <div class="panel-container show">
 
                                         <div class="panel-content p-0">
-                                            <form class="needs-validation" novalidate>
-                                                <div class="panel-content">
-                                                    <div class="form-row">
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">NIK</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="62200147">
-                                                        </div>
+                                            <div class="panel-content">
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">NIK</label>
+                                                        <input type="text" id="simpleinput" class="form-control" placeholder="62200147">
+                                                    </div>
 
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Name</label>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Name</label>
 
-                                                            <div class="input-group input-group-sm bg-white shadow-inset-2">
-                                                                <div class="input-group-prepend">
-                                                                    <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
-                                                                        <i class="fal fa-search"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="Daniel">
-                                                                <div class="input-group-append">
-                                                                    <button id="btn_nik_search" class="btn btn-default" type="button">Search</button>
-                                                                </div>
+                                                        <div class="input-group input-group-md bg-white shadow-inset-2">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
+                                                                    <i class="fal fa-search"></i>
+                                                                </span>
                                                             </div>
-
+                                                            <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="Daniel">
+                                                            <div class="input-group-append">
+                                                                <button id="btn_nik_search" class="btn btn-default" type="button">Search</button>
+                                                            </div>
                                                         </div>
-                                                        
-                                                    </div>
-
-                                                    <div class="form-row">
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Position</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Sr. Spec">
-                                                        </div>
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Department</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Business Supporting">
-                                                        </div>
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Group</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration">
-                                                        </div>
-
 
                                                     </div>
+                                                    
+                                                </div>
 
-                                                    <div class="form-row">
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Home Address</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
+                                                <div class="form-row">
 
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Telephone</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Mobile</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Position</label>
+                                                        <input type="text" id="simpleinput" class="form-control" placeholder="Sr. Spec" readonly>
                                                     </div>
 
-                                                    <div class="form-row">
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Email</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
-                                                        </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Department</label>
+                                                        <input type="text" id="simpleinput" class="form-control" placeholder="Business Supporting" readonly>
+                                                    </div>
 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Group</label>
+                                                        <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration" readonly>
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Section</label>
+                                                        <input type="text" id="simpleinput" class="form-control" placeholder="" readonly>
                                                     </div>
 
                                                 </div>
-                                            </form>
+
+                                            </div>
+
                                         </div>
 
-
                                     </div>
-                                </div>
 
+                                </div>
                                 
                                 <div class="panel">
                                     <div class="panel-hdr">
@@ -653,57 +642,138 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     <div class="panel-container show">
 
                                         <div class="panel-content p-0">
-                                            <form class="needs-validation" novalidate>
-                                                <div class="panel-content">
+                                            
+                                            <div class="panel-content">
 
-                                                    <div class="form-row">
-                                                        
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Route Bus</label>
+                                                <div class="form-row">
+                                                    
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Route Bus</label>
 
-                                                            <div class="input-group input-group-sm bg-white shadow-inset-2">
-                                                                <div class="input-group-prepend">
-                                                                    <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
-                                                                        <i class="fal fa-search"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="">
-                                                                <div class="input-group-append">
-                                                                    <button id="btn_route_bus" class="btn btn-default" type="button">Search</button>
-                                                                </div>
+                                                        <div class="input-group input-group-md bg-white shadow-inset-2">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
+                                                                    <i class="fal fa-search"></i>
+                                                                </span>
                                                             </div>
-
-                                                        </div>
-
-                                                        <div class="col-md-4 mb-3">
-                                                            <label class="form-label" for="simpleinput">Applicant ID</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="">
+                                                            <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="">
+                                                            <div class="input-group-append">
+                                                                <button id="btn_route_bus" class="btn btn-default" type="button">Search</button>
+                                                            </div>
                                                         </div>
 
                                                     </div>
 
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Home Address</label>
+                                                        <input type="text" id="requester_home" name="requester_home" class="form-control" placeholder="">
+                                                    </div>
                                                 </div>
 
-                                            </form>
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Telephone</label>
+                                                        <input class="form-control" type="text" id="requester_tel" name="requester_tel"  value="" >
+                                                    </div>
+                                                    
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Mobile</label>
+                                                        <input type="text" id="requester_mobile" name="requester_mobile" class="form-control"  value="" >
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Email</label>
+                                                        <input type="text" id="requester_email" name="requester_email" class="form-control" value="">
+                                                    </div>
+                                                    
+                                                </div>
+
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
                                 </div>
 
-                            </div>
-                        </div>
+                                <div class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Requester <span class="fw-300"><i> </i></span>
+                                        </h2>
+                                    </div>
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close</button>
-                            <button type="button" class="btn btn-primary" id="btn_save"> <i class="fal fa-save mr-1"></i> Save </button>
-                            <button type="button" class="btn btn-primary" id="btn_edit"> <i class="fal fa-edit mr-1"></i> Edit </button>
-                        </div>
+                                    <div class="panel-container show">
+    
+                                        <div class="panel-content p-0">
+                                            <div class="panel-content">
+                                                <!-- 
+                                                <div class="form-row" style="display:none;">
+                                                
+                                                    Approval only 
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Process Status</label>
+                                                        <input type="text" id="process_status" name="process_status" class="form-control" placeholder="">
+                                                    </div>
+                                                
+                                                </div> -->
+                                            
+                                                <div class="form-row">
+
+                                                    <!-- Approval only --> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Application Date</label>
+                                                        <input class="form-control" type="text" id="application_date" name="application_date"  name="date" value="" readonly>
+                                                    </div>
+                                                    
+                                                    <!-- Approval only --> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Applicator ID No.</label>
+                                                        <input type="number" id="application_id" name="application_id" class="form-control" placeholder="62200147" value="" readonly>
+                                                    </div>
+
+                                                    <!-- Approval only --> 
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Applicator Name</label>
+                                                        <input type="text" id="application_name" name="application_name" class="form-control" placeholder="Daniel" value="" readonly>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <div class="form-row" >
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="example-textarea">Reject Reason</label>
+                                                        <textarea class="form-control" id="reject_reason" name="reject_reason" rows="5" readonly="readonly"></textarea>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+    
+                                    </div>
+
+                                </div>
+                         
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close</button>
+                        <button type="button" class="btn btn-primary" id="btn_save"> <i class="fal fa-save mr-1"></i> Save </button>
+                        <button type="button" class="btn btn-primary" id="btn_edit"> <i class="fal fa-edit mr-1"></i> Edit </button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Shuttle bus ROUTE - Modal Large -->
-        <div class="modal fade" id="shuttlebus-route-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+
+
+        <!-- Shuttle bus ROUTE - Modal Large default version -->
+        <!-- 
+        <div class="modal fade" id="shuttle-bus-route-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -730,7 +800,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         </h4>
                                                         <div class="demo-window rounded mb-g shadow-1 m-auto" >
                                                             <div class="demo-window-content">
+                                                             -->
                                                                 <!-- content -->
+                                                                <!-- 
+                                                                <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
                                                                 <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
                                                             </div>
                                                         </div>
@@ -746,12 +819,98 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             </div>
                         </div>
                     </div>
+
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close</button>
+                        <button type="button" id="btn_route_close" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        
+
+        <!-- shuttle bus route  - slider version -->
+                 
+        <div class="modal fade" id="shuttle-bus-route-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Shuttle Bus</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="col-xl-12">
+                            <div id="panel-1" class="panel">
+                                <div class="panel-container show">
+                                    <div class="panel-content">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="mb-g mt-2 text-center">
+                                                    Shuttle but <strong>ROUTE</strong> <br>
+                                                    <small>
+                                                        Refference of Screen Capture
+                                                    </small>
+                                                </h4>
+                                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                    <ol class="carousel-indicators">
+                                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                                                    </ol>
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active">
+                                                            <div class="carousel-item-desc"><strong>Cikarang 1 - HMMI</strong></div>
+                                                            <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="carousel-item-desc"><strong>Bekasi 1 - HMMI</strong></div>
+                                                            <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="carousel-item-desc"><strong>Bekasi 2 - HMMI</strong></div>
+                                                            <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="carousel-item-desc"><strong>Karawang 1 - HMMI</strong></div>
+                                                            <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="carousel-item-desc"><strong>Karawang 2 - HMMI</strong></div>
+                                                            <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="carousel-item-desc"><strong>Purwakarta - HMMI</strong></div>
+                                                            <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                        </div>
+                                                    </div>
+                                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fal fa-angle-left"></i></span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fal fa-angle-right"></i></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn_route_close" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
 
         <!-- DOC: script to save and load page settings -->
         <script src="js/setting.bundle.js"></script>
@@ -796,7 +955,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                 $('#btn_route_bus').on('click', function(){
 
-                    $('#shuttlebus-route-modal-lg').modal('show');
+                    $('#shuttle-bus-route-modal-lg').modal('show');
 
                 });
 
@@ -869,7 +1028,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             className: 'btn-primary btn-sm mr-1'
                         },
                         {
-                            text: '<i class="fal fa-save mr-1"></i> Register',
+                            text: '<i class="fal fa-save mr-1"></i> Create',
                             name: 'regist',
                             className: 'btn-success btn-sm mr-1',
                             action: function ( e, dt, node, config ) {
@@ -939,6 +1098,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                             }
                         },
+                        /*
                         {
                             text: '<i class="fal fa-save mr-1"></i> Approved',
                             name: 'approved',
@@ -994,7 +1154,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                 });
 
                             }
-                        }
+                        }*/
 
                     ]
                 });

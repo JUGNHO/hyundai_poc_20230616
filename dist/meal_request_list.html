@@ -599,7 +599,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                     <div class="form-row">
                                                         <div class="col-md-4 mb-3">
                                                             <label class="form-label" for="simpleinput">NIK</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="62200147">
+                                                            <input type="text" id="simpleinput" class="form-control" placeholder="62200147" readonly>
                                                         </div>
 
                                                         <div class="col-md-4 mb-3">
@@ -625,17 +625,17 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                                         <div class="col-md-4 mb-3">
                                                             <label class="form-label" for="simpleinput">Position</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Sr. Spec">
+                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Sr. Spec" readonly>
                                                         </div>
 
                                                         <div class="col-md-4 mb-3">
                                                             <label class="form-label" for="simpleinput">Department</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Business Supporting">
+                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Business Supporting" readonly>
                                                         </div>
 
                                                         <div class="col-md-4 mb-3">
                                                             <label class="form-label" for="simpleinput">Group</label>
-                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration">
+                                                            <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration" readonly>
                                                         </div>
 
 
@@ -871,8 +871,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close </button>
-                        <button type="button" class="btn btn-primary" id="btn_save"> <i class="fal fa-save mr-1"></i> Save </button>
-                        <button type="button" class="btn btn-primary" id="btn_edit"> <i class="fal fa-edit mr-1"></i> Edit </button>
+                        <!-- <button type="button" class="btn btn-primary" id="btn_save"> <i class="fal fa-save mr-1"></i> Save </button>
+                        <button type="button" class="btn btn-primary" id="btn_edit"> <i class="fal fa-edit mr-1"></i> Edit </button> -->
                     </div>
                 </div>
 
@@ -909,28 +909,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
             /* demo scripts for change table color */
             /* change background */
 
-            $('#application_date').datepicker({
-                    setDate: new Date(),
-                    todayHighlight: true,
-                    autoclose: true,
-                    format: 'yyyy-mm-dd',
-                    templates: {
-                        leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
-                        rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
-                    }
-            });
-
-            $('#meal_date').datepicker({
-                    setDate: new Date(),
-                    todayHighlight: true,
-                    autoclose: true,
-                    format: 'yyyy-mm-dd',
-                    templates: {
-                        leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
-                        rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
-                    }
-            });
-
 
             $(document).ready(function(){
 
@@ -950,6 +928,28 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     $('#default-example-modal-lg').modal('hide');
 
                     Swal.fire('Successfully Saved.', '', 'success');
+                });
+
+                $('#application_date').datepicker({
+                    setDate: new Date(),
+                    todayHighlight: true,
+                    autoclose: true,
+                    format: 'yyyy-mm-dd',
+                    templates: {
+                        leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
+                        rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
+                    }
+                });
+
+                $('#meal_date').datepicker({
+                    setDate: new Date(),
+                    todayHighlight: true,
+                    autoclose: true,
+                    format: 'yyyy-mm-dd',
+                    templates: {
+                        leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
+                        rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
+                    }
                 });
 
 

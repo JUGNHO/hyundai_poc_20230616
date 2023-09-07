@@ -370,47 +370,47 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                 <tbody>
                                                     <tr>
                                                         <td><input type="checkbox"></td>
-                                                        <td>1</td>
+                                                        <td>1000000092</td>
                                                         <td>62200147</td>
-                                                        <td>Daniel</td>
-                                                        <td>Sr. Spec</td>
-                                                        <td>BS</td>
-                                                        <td>BS@hmmi.com</td>
-                                                        <td>Reason Text xxx</td>
-                                                        <td>xxx</td>
-                                                        <td>Indonesian</td>
+                                                        <td>Ikrar Anugrah Putra</td>
+                                                        <td>Manager</td>
+                                                        <td>GA</td>
+                                                        <td>testtest@hyundai.com</td>
+                                                        <td>Reason Request test 123445454545</td>
+                                                        <td>Guest</td>
+                                                        <td>Korean</td>
                                                         <td>2</td>
-                                                        <td>2019/04/02</td>
-                                                        <td>09:00 AM</td>
-                                                        <td>27,200</td>
-                                                        <td>54,400</td>
+                                                        <td>2023-08-31</td>
+                                                        <td>13:00:00</td>
+                                                        <td>27,200.00</td>
+                                                        <td>54,400.00</td>
                                                         <td>xxxxxx</td>
                                                         <td>xxxxxx</td>
                                                         <td>In Approval</td>
-                                                        <td>30-10-2022</td>
-                                                        <td>30-10-2022</td>
+                                                        <td>2023-08-30</td>
+                                                        <td>2023-08-30</td>
                                                     </tr>
                                                     <tr>
                                                         <td><input type="checkbox"></td>
-                                                        <td>1</td>
+                                                        <td>1000000093</td>
                                                         <td>62200147</td>
-                                                        <td>Daniel</td>
-                                                        <td>Sr. Spec</td>
-                                                        <td>BS</td>
-                                                        <td>BS@hmmi.com</td>
-                                                        <td>Reason Text xxx</td>
-                                                        <td>xxx</td>
+                                                        <td>Ikrar Anugrah Putra</td>
+                                                        <td>Manager</td>
+                                                        <td>GA</td>
+                                                        <td>teeeeeeeeee@hyudai.com</td>
+                                                        <td>Reason Request test22222121</td>
+                                                        <td>Company</td>
                                                         <td>Indonesian</td>
                                                         <td>2</td>
-                                                        <td>2019/04/02</td>
-                                                        <td>09:00 AM</td>
-                                                        <td>27,200</td>
-                                                        <td>54,400</td>
+                                                        <td>2023-08-31</td>
+                                                        <td>09:00:00</td>
+                                                        <td>27,200.00</td>
+                                                        <td>54,400.00</td>
                                                         <td>xxxxxx</td>
                                                         <td>xxxxxx</td>
                                                         <td>In Approval</td>
-                                                        <td>30-10-2022</td>
-                                                        <td>30-10-2022</td>
+                                                        <td>2023-08-30</td>
+                                                        <td>2023-08-30</td>
                                                     </tr>
                                                     
                                                 </tbody>
@@ -952,13 +952,26 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <!-- common modal!!! -->
         <script src="js/common-modal.js"></script>
 
+        <script src="js/formplugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
 
         <script>
             /* demo scripts for change table color */
             /* change background */
 
 
+
+
             $(document).ready(function(){
+
+                $('#btn_info').popover({
+                    title: 'Information',
+                    content : 'Kore dd.. <br> OK',
+                    placement: 'top',
+                    trigger: 'hover', 
+                    html: true
+
+                });
 
                 loadMenuActive('admin_meal_request_list');
 
@@ -967,6 +980,19 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     $('#default-example-modal-lg').modal('hide');
 
                     Swal.fire('Successfully Saved.', '', 'success');
+                });
+
+               
+
+                $('#meal_date').datepicker({
+                    setDate: new Date(),
+                    todayHighlight: true,
+                    autoclose: true,
+                    format: 'yyyy-mm-dd',
+                    templates: {
+                        leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
+                        rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
+                    }
                 });
 
 
