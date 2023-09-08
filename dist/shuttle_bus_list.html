@@ -658,7 +658,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                             </div>
                                                             <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="">
                                                             <div class="input-group-append">
-                                                                <button id="btn_route_bus" class="btn btn-default" type="button">Search</button>
+                                                                <button id="btn_route_bus_search" class="btn btn-default" type="button">Search</button>
                                                             </div>
                                                         </div>
 
@@ -772,7 +772,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
 
         <!-- Shuttle bus ROUTE - Modal Large default version -->
-        <!-- 
+         
         <div class="modal fade" id="shuttle-bus-route-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -785,7 +785,60 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     <div class="modal-body">
                         
                         <div class="col-xl-12">
-                            <div id="panel-1" class="panel">
+
+                            <div class="panel">
+                                <div class="panel-hdr">
+                                    <h2>
+                                        Shuttle Bus Route <span class="fw-300"><i> </i></span>
+                                    </h2>
+                                </div>
+                                <div class="panel-container show">
+                                    <div class="panel-content p-0">
+                                        <div class="panel-content">
+                                            <div class="form-row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label" for="simpleinput">Route Bus</label>
+                                                    <input type="hidden" id="route_description2" name="route_description" value="">
+                                                    <select class="form-control" id="route_bus" name="route_bus">
+                                                        <option>Cikarang 1 - HMMI</option>
+                                                        <option>Bekasi 1 - HMMI</option>
+                                                        <option>Bekasi 2 - HMMI</option>
+                                                        <option>Karawang 1 - HMMI</option>
+                                                        <option>Karawang 2 - HMMI</option>
+                                                        <option>Purwakarta 1 - HMMI</option>
+                                                    </select>                                                   
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3" id="route_img" style="display:none;">
+                                                        <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                           <div class="form-row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label" for="simpleinput">Pick Up Point</label>
+                                                     <select class="form-control" id="pick_up_point" name="pick_up_point">
+                                                        <option>1 (Cikarang Pickup Point 1)</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                                                                                                            
+                                            </div>
+                                        
+                                        </div>
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- <div id="panel-1" class="panel">
                                 <div class="panel-container show">
                                     <div class="panel-content">
                                         <div class="row">
@@ -795,16 +848,14 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <h4 class="mb-g mt-2 text-center">
                                                             Shuttle bus <strong>ROUTE</strong> <br>
                                                             <small>
-                                                                Refference of Screen Capture
+                                                                Reference of Screen Capture
                                                             </small>
                                                         </h4>
                                                         <div class="demo-window rounded mb-g shadow-1 m-auto" >
                                                             <div class="demo-window-content">
-                                                             -->
-                                                                <!-- content -->
-                                                                <!-- 
+                                                               
                                                                 <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
-                                                                <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -816,7 +867,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -825,12 +876,12 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         
 
         <!-- shuttle bus route  - slider version -->
-                 
+        <!--          
         <div class="modal fade" id="shuttle-bus-route-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -911,6 +962,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div> 
+        -->
+
 
         <!-- DOC: script to save and load page settings -->
         <script src="js/setting.bundle.js"></script>
@@ -946,6 +999,22 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                 loadMenuActive('user_shuttle_bus_list');
 
+                $('#route_bus').on('change', function(idx, obj){
+
+                    if($('#route_bus').val() != '') {
+                        $('#route_img').show();
+                    }
+
+                    
+                    
+                   /* if(this.value == 'BS4012'){
+                        $('#file_div').show();
+                    }else{
+                        $('#file_div').hide();
+                    }*/
+                    
+                });
+
                 $('#btn_save').on('click', function(){
 
                     $('#default-example-modal-lg').modal('hide');
@@ -953,10 +1022,28 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     Swal.fire('Successfully Saved.', '', 'success');
                 });
 
-                $('#btn_route_bus').on('click', function(){
+             
+                $('#btn_route_bus_search').on('click', function(){
 
-                    $('#shuttle-bus-route-modal-lg').modal('show');
+                    $('#default-example-modal-lg').modal('hide');
 
+                    setTimeout(function(){
+                        
+                        $('#shuttle-bus-route-modal-lg').modal('show');
+                        
+                    },500);
+
+                });
+                
+                
+                $('#btn_route_close').on('click', function(){
+                    
+                    setTimeout(function(){
+                        
+                        $('#default-example-modal-lg').modal('show');
+                        
+                    },500);
+                    
                 });
 
 
