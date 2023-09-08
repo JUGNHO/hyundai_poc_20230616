@@ -634,6 +634,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                                         <input type="hidden" id="route_description2" name="route_description" value="">
                                                             <select class="form-control" id="route_bus" name="route_bus">
+                                                                <option></option>
                                                                 <option>Cikarang 1 - HMMI</option>
                                                                 <option>Bekasi 1 - HMMI</option>
                                                                 <option>Bekasi 2 - HMMI</option>
@@ -939,67 +940,34 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                         <div class="panel-content p-0">
                                             <div class="panel-content">
-                                                <!-- 
-                                                <div class="form-row">
-                                                    <div class="col-md-12 mb-3">
-                                                        <label class="form-label" for="simpleinput">Route Image Upload</label>
-                                                        <input type="file" class="form-control" id="route_img_file_upload" accept="image/*">
+                                                                                           
+                                                <div class="form-row" id="file_div">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validation_route_file_upload" class="form-label">Route Image Upload
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="route_img_file" name="route_img_file" accept="image/*" >
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
                                                     </div>
 
+                                                    
                                                     <div class="col-md-6 mb-3">
-                                                        <label class="form-label" for="simpleinput">Route Name</label>
+                                                        <label class="form-label" for="simpleinput">Route Name
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+
                                                         <input type="text" id="route_name" class="form-control" placeholder="Please enter Route name.">    
                                                     </div>
                                                     
-                                                </div> -->
-
-                                                <div class="form-row" id="file_div">
-                                                    <div class="col-md-6 mb-3">
-                                                        <label for="validation_route_file_upload" class="form-label">Route Image Upload</label>
-                                                        <div class="custom-file">
-                                                            <input type="file" class="custom-file-input" id="route_img_file_upload" name="route_img_file_upload" accept="image/*">
-                                                            <label class="custom-file-label" for="customFile">Choose file</label>
-                                                        </div>
-                                                        
-                                                        <div id="route_preview" style="margin-top:10px;">
-                                                        </div> 
-
-                                                        <!-- preview test -->
-<!-- 
-                                                        <div id="uploadDataInfo" class="alert hide-element">
-                                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">
-                                                              <i class="fa fa-times"></i>
-                                                            </a>
-                                                            <p class="" id="toManyFilesUploaded"></p>
-                                                            <p class="" id="filesCount"></p>
-                                                            <p class="" id="filesSupported"></p>
-                                                            <p class="" id="filesUnsupported"></p>
-                                                        </div>
-                                                        <div class="hide-element" id="previewImages">
-                                                            <div class="media">
-                                                              <div class="media-left">
-
-                                                                <img class="media-object thumbnail" src="img/200x200.gif" alt="" id="0" title="" data-toggle="modal" data-target="#individualImagePreview" />
-                                                              </div>
-
-                                                              <div class="media-body">
-                                                                <p><label for="validate-route-name">Route Name:  </label><input type="text" class="form-control" value="" name="validate-route-name" /></p>
-                                                                <!-- 
-                                                                <a role="button" class="btn btn-primary hide-element" id="undo0">Undo</a>
-                                                                <a role="button" class="btn btn-danger pull-right" id="delete0">Delete</a> 
-                                                                -->
-                                                              </div>
-                                                            </div>
-                                                            <div class="media">
-                                                              <div class="media-left">
-                                                                <img class="media-object thumbnail" src="img/200x200.gif" alt="" id="1" title="" data-toggle="modal" data-target="#individualImagePreview" />
-                                                              </div>                                                             
-                                                                      -->                                  
-                                                          <!-- preview test end -->
-                                                        
-                                                    </div>
+                                                                
+                                                    <div class="form-row mb-3" id="route_preview" style="margin-top:10px; display:none;">
+                                                        <img id="img_preview" src="#" style="max-height: 400px; object-fit: contain;" />
+                                                    </div> 
                                                     
                                                 </div>
+                                                    
+                                                
 
                                                 <!-- <div class="form-row">
                                                    <div class="col-md-6 mb-3">
@@ -1073,10 +1041,11 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                     if($('#route_bus').val() != '') {
                         $('#route_img').show();
+                    }else{
+                        $('#route_img').hide();
                     }
+
                 });
-
-
 
                 // 더블클릭시 edit modal 오픈
                 $('#dt-basic-example').on('dblclick', 'tr', function () {
@@ -1260,7 +1229,43 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     ]
                 });
 
+
+
+
+            /*preivew test*/
+
+            // 이벤트를 바인딩해서 input에 파일이 올라올때 (input에 change를 트리거할때) 위의 함수를 this context로 실행합니다.
+            $("#route_img_file").change(function(){
+
+                if($("#route_img_file").val() != ''){
+                    $('#route_preview').show();
+                    readURL(this);
+                }else{
+                    $('#route_preview').hide();
+                }
+               
             });
+
+
+
+
+            });
+
+            //Preivew 관련
+            function readURL(input) {
+             if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              
+              reader.onload = function (e) {
+               $('#img_preview').attr('src', e.target.result);  
+              }
+              
+              reader.readAsDataURL(input.files[0]);
+              }
+            }
+             
+            
+            // end for preview
     
 
         </script>

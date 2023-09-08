@@ -799,7 +799,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                 <div class="col-md-6 mb-3">
                                                     <label class="form-label" for="simpleinput">Route Bus</label>
                                                     <input type="hidden" id="route_description2" name="route_description" value="">
-                                                    <select class="form-control" id="route_bus" name="route_bus">
+                                                    <select class="form-control" id="route_bus" name="route_bus" >
+                                                        <option></option>
                                                         <option>Cikarang 1 - HMMI</option>
                                                         <option>Bekasi 1 - HMMI</option>
                                                         <option>Bekasi 2 - HMMI</option>
@@ -1003,6 +1004,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                     if($('#route_bus').val() != '') {
                         $('#route_img').show();
+                    }else{
+                        $('#route_img').hide();
                     }
 
                     
