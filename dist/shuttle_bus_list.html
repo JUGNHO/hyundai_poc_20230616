@@ -618,10 +618,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration" readonly>
                                                     </div>
 
-                                                    <div class="col-md-4 mb-3">
+                                                   <!--  <div class="col-md-4 mb-3">
                                                         <label class="form-label" for="simpleinput">Section</label>
                                                         <input type="text" id="simpleinput" class="form-control" placeholder="" readonly>
-                                                    </div>
+                                                    </div> -->
 
                                                 </div>
 
@@ -633,7 +633,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                 </div>
                                 
-                                <div class="panel">
+                                <!-- <div class="panel">
                                     <div class="panel-hdr">
                                         <h2>
                                             Shuttle Bus <span class="fw-300"><i> </i></span>
@@ -693,6 +693,95 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                         </div>
 
                                     </div>
+                                </div> -->
+
+                                <div class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Shuttle Bus <span class="fw-300"><i> </i></span>
+                                        </h2>
+                                    </div>
+                                    <div class="panel-container show">
+
+                                        <div class="panel-content p-0">
+                                            
+                                            <div class="panel-content">
+
+                                                <div class="form-row">
+                                                    
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Route Bus</label>
+
+                                                        <input type="hidden" id="route_description2" name="route_description" value="">
+                                                            <select class="form-control" id="route_bus" name="route_bus">
+                                                                <option></option>
+                                                                <option>Cikarang 1 - HMMI</option>
+                                                                <option>Bekasi 1 - HMMI</option>
+                                                                <option>Bekasi 2 - HMMI</option>
+                                                                <option>Karawang 1 - HMMI</option>
+                                                                <option>Karawang 2 - HMMI</option>
+                                                                <option>Purwakarta 1 - HMMI</option>
+                                                            </select>                                          
+                                                        <!-- 
+                                                        <div class="input-group input-group-md bg-white shadow-inset-2">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text bg-transparent border-right-0 py-1 px-3 text-success">
+                                                                    <i class="fal fa-search"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control border-left-0 bg-transparent pl-0" placeholder="">
+                                                            <div class="input-group-append">
+                                                                <button id="btn_route_bus_search" class="btn btn-default" type="button">Search</button>
+                                                            </div>
+                                                        </div>
+                                                        -->
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label" for="simpleinput">Pick Up Point</label>
+                                                         <select class="form-control" id="pick_up_point" name="pick_up_point">
+                                                            <option>1 (Cikarang Pickup Point 1)</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3" id="route_img" style="display:none;">
+                                                        <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                     <div class="col-md-12 mb-3">
+                                                        <label class="form-label" for="simpleinput">Home Address</label>
+                                                        <input type="text" id="requester_home" name="requester_home" class="form-control" placeholder="">
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Telephone</label>
+                                                        <input class="form-control" type="text" id="requester_tel" name="requester_tel"  value="" >
+                                                    </div>
+                                                    
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Mobile</label>
+                                                        <input type="text" id="requester_mobile" name="requester_mobile" class="form-control"  value="" >
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">Email</label>
+                                                        <input type="text" id="requester_email" name="requester_email" class="form-control" value="">
+                                                    </div>
+                                                    
+                                                </div>
+
+                                            </div>
+                                           
+                                        </div>
+
+                                    </div>
                                 </div>
 
                                 <div class="panel">
@@ -706,17 +795,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
     
                                         <div class="panel-content p-0">
                                             <div class="panel-content">
-                                                <!-- 
-                                                <div class="form-row" style="display:none;">
-                                                
-                                                    Approval only 
-                                                    <div class="col-md-12 mb-3">
-                                                        <label class="form-label" for="simpleinput">Process Status</label>
-                                                        <input type="text" id="process_status" name="process_status" class="form-control" placeholder="">
-                                                    </div>
-                                                
-                                                </div> -->
-                                            
+                                                                                            
                                                 <div class="form-row">
 
                                                     <!-- Approval only --> 
@@ -772,7 +851,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
 
         <!-- Shuttle bus ROUTE - Modal Large default version -->
-         
+        <!-- 
         <div class="modal fade" id="shuttle-bus-route-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -838,37 +917,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                 </div>
                             </div>
 
-
-                            <!-- <div id="panel-1" class="panel">
-                                <div class="panel-container show">
-                                    <div class="panel-content">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="card mb-g">
-                                                    <div class="card-body">
-                                                        <h4 class="mb-g mt-2 text-center">
-                                                            Shuttle bus <strong>ROUTE</strong> <br>
-                                                            <small>
-                                                                Reference of Screen Capture
-                                                            </small>
-                                                        </h4>
-                                                        <div class="demo-window rounded mb-g shadow-1 m-auto" >
-                                                            <div class="demo-window-content">
-                                                               
-                                                                <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
@@ -878,6 +926,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div>
+         -->
 
         
 

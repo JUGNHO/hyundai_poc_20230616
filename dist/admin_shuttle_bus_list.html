@@ -599,11 +599,11 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <label class="form-label" for="simpleinput">Group</label>
                                                         <input type="text" id="simpleinput" class="form-control" placeholder="Business Administration" readonly>
                                                     </div>
-
+                                                    <!-- 
                                                     <div class="col-md-4 mb-3">
                                                         <label class="form-label" for="simpleinput">Section</label>
                                                         <input type="text" id="simpleinput" class="form-control" placeholder="" readonly>
-                                                    </div>
+                                                    </div> -->
 
                                                 </div>
 
@@ -656,15 +656,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         </div>
                                                         -->
                                                     </div>
-                                                </div>
 
-                                                <div class="form-row">
-                                                    <div class="col-md-12 mb-3" id="route_img" style="display:none;">
-                                                        <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row">
                                                     <div class="col-md-6 mb-3">
                                                         <label class="form-label" for="simpleinput">Pick Up Point</label>
                                                          <select class="form-control" id="pick_up_point" name="pick_up_point">
@@ -674,9 +666,14 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                             <option>4</option>
                                                         </select>
                                                     </div>
-                                                                                                                                
+
                                                 </div>
 
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3" id="route_img" style="display:none;">
+                                                        <img src="img/demo/shuttle_bus_route.png" class="img-fluid" alt="Default Mode">
+                                                    </div>
+                                                </div>
 
                                                 <div class="form-row">
                                                      <div class="col-md-12 mb-3">
@@ -918,6 +915,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         </div> -->
 
         <!-- FileUpload -->
+        <!-- 
         <div class="modal fade" id="route-upload-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -966,15 +964,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                     </div> 
                                                     
                                                 </div>
-                                                    
-                                                
-
-                                                <!-- <div class="form-row">
-                                                   <div class="col-md-6 mb-3">
-                                                        <label class="form-label" for="simpleinput">Route Name</label>
-                                                        <input type="text" id="route_name" class="form-control" placeholder="=== Please enter Route name ===">    
-                                                    </div>
-                                                </div> -->
                                             
                                             </div>
 
@@ -994,6 +983,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     </div>
                 </div>
             </div>
+             -->
 
 
         <!-- DOC: script to save and load page settings -->
@@ -1037,7 +1027,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     Swal.fire('Successfully Saved.', '', 'success');
                 });
 
-                $('#route_bus').on('change', function(idx, obj){
+               /* $('#route_bus').on('change', function(idx, obj){
 
                     if($('#route_bus').val() != '') {
                         $('#route_img').show();
@@ -1045,7 +1035,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                         $('#route_img').hide();
                     }
 
-                });
+                });*/
 
                 // 더블클릭시 edit modal 오픈
                 $('#dt-basic-example').on('dblclick', 'tr', function () {
@@ -1054,7 +1044,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 });
 
 
-                $('#btn_route_bus_search').on('click', function(){
+                /*$('#btn_route_bus_search').on('click', function(){
 
                     $('#default-example-modal-lg').modal('hide');
 
@@ -1064,10 +1054,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                         
                     },500);
 
-                });
+                });*/
                 
                 
-                $('#btn_route_close').on('click', function(){
+                /*$('#btn_route_close').on('click', function(){
                     
                     setTimeout(function(){
                         
@@ -1076,7 +1066,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     },500);
                     
                 });
-
+                */
 
 
 
@@ -1147,7 +1137,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             name: 'excel',
                             className: 'btn-primary btn-sm mr-1'
                         },
-
+                        /*
                          {
                             text: '<i class="fal fa-file-upload mr-1"></i> Route Upload',
                             name: 'route-upload',
@@ -1155,7 +1145,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             action: function ( e, dt, node, config ) {
                                 $('#route-upload-modal-lg').modal('show');
                             }
-                        },
+                        },*/
 
                         /*{
                             text: '<i class="fal fa-edit mr-1"></i> Edit',
@@ -1232,26 +1222,25 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
 
 
-            /*preivew test*/
+                /*preivew test*/
+                // 이벤트를 바인딩해서 input에 파일이 올라올때 (input에 change를 트리거할때) 위의 함수를 this context로 실행합니다.
+                /*
+                $("#route_img_file").change(function(){
 
-            // 이벤트를 바인딩해서 input에 파일이 올라올때 (input에 change를 트리거할때) 위의 함수를 this context로 실행합니다.
-            $("#route_img_file").change(function(){
-
-                if($("#route_img_file").val() != ''){
-                    $('#route_preview').show();
-                    readURL(this);
-                }else{
-                    $('#route_preview').hide();
-                }
-               
+                    if($("#route_img_file").val() != ''){
+                        $('#route_preview').show();
+                        readURL(this);
+                    }else{
+                        $('#route_preview').hide();
+                    }
+                   
+                });
+                */
             });
 
-
-
-
-            });
 
             //Preivew 관련
+            /*
             function readURL(input) {
              if (input.files && input.files[0]) {
               var reader = new FileReader();
@@ -1263,9 +1252,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
               reader.readAsDataURL(input.files[0]);
               }
             }
-             
-            
-            // end for preview
+            */
     
 
         </script>
