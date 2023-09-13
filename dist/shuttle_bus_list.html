@@ -843,6 +843,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fal fa-times mr-1"></i> Close</button>
                         <button type="button" class="btn btn-primary" id="btn_save"> <i class="fal fa-save mr-1"></i> Save </button>
                         <button type="button" class="btn btn-primary" id="btn_edit"> <i class="fal fa-edit mr-1"></i> Edit </button>
+                        <button type="button" class="btn btn-primary" id="btn_cancel"> <i class="fal fa-times mr-1"></i> Cancel </button>
                     </div>
                 </div>
             </div>
@@ -1087,6 +1088,29 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                 });
                 
+                $('#btn_cancel').on('click', function(){
+
+                    $('#default-example-modal-lg').modal('hide');
+
+                    Swal.fire({
+                       title: 'Are you sure want to cancel?',
+                       text: 'Data will be permanatly canceled',
+                       icon: 'warning',
+                       
+                       showCancelButton: true, // cancel버튼 보이기. 기본은 원래 없음
+                       confirmButtonText: 'OK', // confirm 버튼 텍스트 지정
+                       cancelButtonText: 'Cancel', // cancel 버튼 텍스트 지정
+                       
+                       reverseButtons: true, // 버튼 순서 거꾸로
+                       
+                    }).then(result => {
+                       // 만약 Promise리턴을 받으면,
+                       if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
+                       
+                          Swal.fire('Successfully Canceled.', '', 'success');
+                       }
+                    });
+                });
                 
                 $('#btn_route_close').on('click', function(){
                     
@@ -1097,6 +1121,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     },500);
                     
                 });
+
 
 
 
@@ -1233,6 +1258,33 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                    
                                       Swal.fire('Success.', '', 'success');
                                    //}
+                                });
+
+                            }
+                        },
+                        {
+                            text: '<i class="fal fa-times mr-1"></i> Cancel',
+                            name: 'cancel',
+                            className: 'btn-success btn-sm mr-1',
+                            action: function ( e, dt, node, config ) {
+                                
+                                Swal.fire({
+                                   title: 'Are you sure want to cancel?',
+                                   text: 'Data will be permanatly canceled',
+                                   icon: 'warning',
+                                   
+                                   showCancelButton: true, // cancel버튼 보이기. 기본은 원래 없음
+                                   confirmButtonText: 'OK', // confirm 버튼 텍스트 지정
+                                   cancelButtonText: 'Cancel', // cancel 버튼 텍스트 지정
+                                   
+                                   reverseButtons: true, // 버튼 순서 거꾸로
+                                   
+                                }).then(result => {
+                                   // 만약 Promise리턴을 받으면,
+                                   if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
+                                   
+                                      Swal.fire('Successfully Canceled.', '', 'success');
+                                   }
                                 });
 
                             }
