@@ -96,6 +96,18 @@ document.write('        				<i class="fal fa-id-card"></i>');
 document.write('                        <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">Entry Permit</span>');
 document.write('                    </a>');
 document.write('                </li>');
+/*document.write('                <li id="user_car_service_list">');
+document.write('                    <a href="car_service_list.html" title="Access Card" >');
+document.write('        				<i class="fal fa-car"></i>');
+document.write('                        <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">Car Service</span>');
+document.write('                    </a>');
+document.write('                </li>');*/
+document.write('                <li id="user_vehicle_access_list">');
+document.write('                    <a href="vehicle_access_list.html" title="Vehicle Access" >');
+document.write('        				<i class="fal fa-car"></i>');
+document.write('                        <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">Vehicle Access</span>');
+document.write('                    </a>');
+document.write('                </li>');
 document.write('                ');
 document.write('            </ul>');
 document.write('        </li>');
