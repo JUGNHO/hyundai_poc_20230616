@@ -568,7 +568,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
         <!-- Modal Large -->
         <div class="modal fade" id="default-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Application Information</h5>
@@ -661,7 +661,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                         <div class="panel-content p-0">
                                             
                                             <div class="panel-content">
-                                                <label class="form-label" for="simpleinput"> | Access applicant</label></p>                                             
+                                                <label class="form-label" for="simpleinput"> | User Information</label></p>                                             
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
                                                         <label class="form-label" for="simpleinput">Name</label>
@@ -675,14 +675,28 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
                                                     <div class="col-md-4 mb-3">
                                                         <label class="form-label" for="simpleinput">Company Name</label>
-                                                        <input type="text" id="simpleinput" class="form-control" placeholder="62200147">
+                                                        <select class="form-control" id="example-select">
+                                                            <option>=== Please select a Company Name ===</option>
+                                                            <option>Autoever</option>
+                                                            <option>ABCD</option>
+                                                            <option>EFGH</option>
+                                                        </select>
                                                     </div>
                                                     
                                                 </div> 
 
                                                 <hr>
-
-                                                <label class="form-label" for="simpleinput"> | Vehicle Status</label></p>
+                                            
+                                                
+                                                <!-- <div class="form-row" style="justify-content: space-between;">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput"> | Vehicle Status</label></p>
+                                                    </div>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="btn btn-primary btn-sm mr-1" id="btn_download"> <i class="fal fa-file-pdf mr-1"></i> Download </button>
+                                                        <button type="button" class="btn btn-primary btn-sm mr-1" id="btn_upload"> <i class="fal fa-cloud-upload mr-1"></i> Upload </button> 
+                                                    </div>
+                                                </div> -->
 
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
@@ -803,23 +817,161 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                                         <input type="text" id="simpleinput" class="form-control" placeholder="1325487245844">
                                                     </div>
 
+                                                </div>
+
+                                                <hr>
+
+                                                <label class="form-label" for="simpleinput"> | Blue-E Status</label></p>
+                                                <div class="form-row">
+                                                
+                                                    <div class="col-md-4 mb-3">
+                                                        <label class="form-label" for="simpleinput">No</label>
+                                                        <input type="text" id="bule-e_num" name="bule-e_num" class="form-control" value="">
+                                                    </div>
+                                                    
                                                     <div class="col-md-4 mb-3">
                                                         <label class="form-label" for="simpleinput">Registration Date</label>
-                                                        <input type="date" id="simpleinput" class="form-control" placeholder="">
+                                                        <input class="form-control input-datepicker" type="text" id="registration_date" name="registration_date" placeholder="select a date" value="">
                                                     </div>
 
                                                     <div class="col-md-4 mb-3">
                                                         <label class="form-label" for="simpleinput">Expired Date</label>
-                                                        <input class="form-control" id="example-date" type="date" name="date" value="">
+                                                        <input class="form-control input-datepicker" type="text" id="expired_date" name="expired_date" placeholder="select a date" value="">
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                <hr>
+
+                                                <!-- PDF download --><!-- 4-files upload -->
+
+                                                <!-- 
+                                                <div class="form-row" style="justify-content: end;">
+                                                    <div class="col-md-4 mb-3">
+                                                        <button type="button" class="btn btn-primary btn-md" style="float:inline-end;" onclick="javascript:alert('This download feature is preparing!!');"><i class="fal fa-download mr-1"></i> Donwload ackowledge letter </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validation_commercial_file" class="form-label">KTP/ID Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="commercial_invoice_file" name="commercial_invoice_file"  required>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="commercial_file_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label">Driver Sim Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="packing_list_file" name="packing_list_file" required>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="pakcing_file_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validation_commercial_file" class="form-label">STNK Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="commercial_invoice_file" name="commercial_invoice_file"  required>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="commercial_file_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label">Acknodackowledge Letter</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="packing_list_file" name="packing_list_file" required>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="pakcing_file_list" style="margin-top:10px;">
+                                                        </div> 
                                                     </div>
 
                                                 </div>
-
+                                                 -->    
                                             </div>
                                            
                                         </div>
 
                                     </div>
+                                </div>
+
+                                <div class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Acknodackowledge Letter <span class="fw-300"><i> </i></span>
+                                        </h2>
+                                        <button type="button" class="btn btn-primary btn-sm" style="margin-right: 16px;" onclick="javascript:alert('This download feature is preparing!!');">
+                                        <i class="fal fa-download mr-1"></i> Donwload</button>
+                                    </div>
+
+                                    <div class="panel-container show">
+                                        <div class="panel-content p-0">
+                                            <div class="panel-content">
+                                                                                            
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="ktp_id_upload" class="form-label">KTP/ID Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="ktp_id_upload" name="ktp_id_upload" disabled>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="ktp_id_upload_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label">Driver Sim Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="driver_sim_upload" name="driver_sim_upload" disabled>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="driver_sim_upload_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validation_commercial_file" class="form-label">STNK Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="stnk_upload" name="stnk_upload" disabled>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="stnk_uploade_list" style="margin-top:10px;">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label">Acknodackowledge Letter Upload</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="acknodackowledge_letter_upload" name="acknodackowledge_letter_upload" disabled>
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                        
+                                                        <div id="acknodackowledge_letter_upload" style="margin-top:10px;">
+                                                        </div> 
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+    
+                                    </div>
+
                                 </div>
 
                                 <div class="panel">
